@@ -6,7 +6,8 @@ namespace Uppgift_3_OOP
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Person p1 = new Person();
+
         }
     }
 }
