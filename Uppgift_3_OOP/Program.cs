@@ -7,14 +7,19 @@ namespace Uppgift_3_OOP
         public static void Main(string[] args)
         {
 
-
             Person p1 = Person.PersonHandler.CreatePerson();
 
             //Set age to person through the PersonHandler class.
-            Person.PersonHandler.SetAge(p1, 100);
+            Person.PersonHandler.SetAge(p1, 75);
+            Person.PersonHandler.SetFname(p1, "Kalle");
+            Person.PersonHandler.SetLname(p1, "Anka");
+            Person.PersonHandler.SetHeight(p1, 75.8);
+            Person.PersonHandler.SetWeight(p1, 35.3);
 
 
 
+
+            Console.WriteLine(Person.PersonHandler.GetAge(p1));
         }
     }
 }

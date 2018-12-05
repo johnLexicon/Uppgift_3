@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Uppgift_3_OOP
 {
-    class Person
+    internal class Person
     {
 
         #region Fields
@@ -13,11 +13,11 @@ namespace Uppgift_3_OOP
         #endregion
 
         #region Properties
-        public int Age { get => age; set => age = value; }
-        public string Fname { get => fname; set => fname = value; }
-        public string Lname { get => lname; set => lname = value; }
-        public double Height { get => height; set => height = value; }
-        public double Weight { get => weight; set => weight = value; }
+        private int Age { get => age; set => age = value; }
+        private string Fname { get => fname; set => fname = value; }
+        private string Lname { get => lname; set => lname = value; }
+        private double Height { get => height; set => height = value; }
+        private double Weight { get => weight; set => weight = value; }
         #endregion
 
         private Person() { }
@@ -44,11 +44,20 @@ namespace Uppgift_3_OOP
                 return new Person();
             }
 
-            public static void SetAge(Person pers, int age)
-            {
-                pers.Age = age;
-            }
+            public static void SetAge(Person p, int age) => p.Age = age;
+            public static int GetAge(Person p) => p.Age;
 
+            public static void SetFname(Person p, string fname) => p.Fname = fname;
+            public static string GetFname(Person p) => p.Fname;
+
+            public static void SetLname(Person p, string lname) => p.Lname = lname;
+            public static string GetLname(Person p) => p.Fname;
+
+            public static void SetHeight(Person p, double height) => p.Height = height;
+            public static double GetHeight(Person p) => p.Height;
+
+            public static void SetWeight(Person p, double weight) => p.Weight = weight;
+            public static double GetWeight(Person p) => p.Weight;
         }
     }
 }
