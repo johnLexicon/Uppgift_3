@@ -6,11 +6,15 @@ namespace Uppgift_3_OOP
     {
         public static void Main(string[] args)
         {
-            Person p1 = new Person();
 
-            //Cannot access the fields in the class Person due to their access modifier is private e.g:
-            //p1.age = 10;
-            //var fname = p1.fname;
+
+            Person p1 = Person.PersonHandler.CreatePerson();
+
+            //Set age to person through the PersonHandler class.
+            Person.PersonHandler.SetAge(p1, 100);
+
+
+
         }
     }
 }
