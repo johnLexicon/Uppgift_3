@@ -5,6 +5,7 @@ namespace Uppgift_3_OOP
     {
 
         #region Fields
+        //3.1.1
         private int age;
         private string fname;
         private string lname;
@@ -31,9 +32,11 @@ namespace Uppgift_3_OOP
             Weight = weight;
         }
 
+        //3.1.2
         public static class PersonHandler
         {
 
+            //3.1.3
             public static Person CreatePerson(int age, string fname, string lname, double height, double weight)
             {
                 return new Person(age, fname, lname, height, weight);
@@ -44,6 +47,7 @@ namespace Uppgift_3_OOP
                 return new Person();
             }
 
+            //3.1.4
             public static void SetAge(Person p, int age) => p.Age = age;
             public static int GetAge(Person p) => p.Age;
 

@@ -33,12 +33,19 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimalRepository.cs" />
+    <Compile Include="BirdError.cs" />
+    <Compile Include="Dog.cs" />
+    <Compile Include="NumericInputError.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Animal.cs" />
     <Compile Include="Horse.cs" />
     <Compile Include="Hedgehog.cs" />
+    <Compile Include="TextInputError.cs" />
+    <Compile Include="UserError.cs" />
+    <Compile Include="UserErrorsRepository.cs" />
     <Compile Include="Worm.cs" />
     <Compile Include="Bird.cs" />
     <Compile Include="Flamingo.cs" />
