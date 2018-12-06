@@ -51,7 +51,7 @@ namespace Uppgift_3_OOP
             public static string GetFname(Person p) => p.Fname;
 
             public static void SetLname(Person p, string lname) => p.Lname = lname;
-            public static string GetLname(Person p) => p.Fname;
+            public static string GetLname(Person p) => p.Lname;
 
             public static void SetHeight(Person p, double height) => p.Height = height;
             public static double GetHeight(Person p) => p.Height;
