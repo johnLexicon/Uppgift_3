@@ -16,10 +16,11 @@ namespace Uppgift_3_OOP
             Person.PersonHandler.SetHeight(p1, 75.8);
             Person.PersonHandler.SetWeight(p1, 35.3);
 
-
-
-
             Console.WriteLine(Person.PersonHandler.GetAge(p1));
+            Console.WriteLine(Person.PersonHandler.GetFname(p1));
+            Console.WriteLine(Person.PersonHandler.GetLname(p1));
+            Console.WriteLine(Person.PersonHandler.GetHeight(p1));
+            Console.WriteLine(Person.PersonHandler.GetWeight(p1));
         }
     }
 }
