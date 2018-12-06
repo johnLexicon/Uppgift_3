@@ -39,9 +39,12 @@
     <Compile Include="Animal.cs" />
     <Compile Include="Horse.cs" />
     <Compile Include="Hedgehog.cs" />
-    <Compile Include="Dog.cs" />
     <Compile Include="Worm.cs" />
     <Compile Include="Bird.cs" />
+    <Compile Include="Flamingo.cs" />
+    <Compile Include="Swan.cs" />
+    <Compile Include="Stork.cs" />
+    <Compile Include="Cat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
