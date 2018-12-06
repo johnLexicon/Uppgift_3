@@ -21,6 +21,15 @@ namespace Uppgift_3_OOP
             Console.WriteLine(Person.PersonHandler.GetLname(p1));
             Console.WriteLine(Person.PersonHandler.GetHeight(p1));
             Console.WriteLine(Person.PersonHandler.GetWeight(p1));
+
+            Animal a1 = new Animal()
+            {
+                Age = 10,
+                Name = "Bucky",
+                Weight = 200
+            };
+
+            Console.WriteLine(a1.Stats());
         }
     }
 }

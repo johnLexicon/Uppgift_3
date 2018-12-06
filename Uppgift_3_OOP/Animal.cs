@@ -16,5 +16,10 @@ namespace Uppgift_3_OOP
         public string Name { get => name; set => name = value; }
         public double Weight { get => weight; set => weight = value; }
         public int Age { get => age; set => age = value; }
+
+        public virtual string Stats()
+        {
+            return $"Name: {Name} Weigth: {Weight} Age: {Age} ";
+        }
     }
 }
