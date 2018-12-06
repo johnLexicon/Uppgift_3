@@ -22,14 +22,28 @@ namespace Uppgift_3_OOP
             Console.WriteLine(Person.PersonHandler.GetHeight(p1));
             Console.WriteLine(Person.PersonHandler.GetWeight(p1));
 
-            Animal a1 = new Animal()
+            Bird b1 = new Swan()
             {
                 Age = 10,
                 Name = "Bucky",
-                Weight = 200
+                Weight = 200,
+                WingSpan = 70,
+                LifePartner = null
             };
 
-            Console.WriteLine(a1.Stats());
+            Bird b2 = new Swan()
+            {
+                Age = 20,
+                Name = "Daisy",
+                Weight = 100,
+                WingSpan = 36,
+                LifePartner = null
+            };
+
+            (b1 as Swan).LifePartner = (b2 as Swan);
+            (b2 as Swan).LifePartner = (b1 as Swan);
+
+            Console.WriteLine(b1.Stats());
         }
     }
 }

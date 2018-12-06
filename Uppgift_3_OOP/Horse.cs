@@ -11,5 +11,10 @@ namespace Uppgift_3_OOP
         }
 
         public bool IsRaceHorse { get => isRaceHorse; set => isRaceHorse = value; }
+
+        public override string Stats()
+        {
+            return $"{base.Stats()} Is a race horse: {IsRaceHorse}";
+        }
     }
 }

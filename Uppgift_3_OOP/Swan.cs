@@ -11,5 +11,11 @@ namespace Uppgift_3_OOP
         }
 
         public Swan LifePartner { get => lifePartner; set => lifePartner = value; }
+
+        public override string Stats()
+        {
+            string lifePartnerName = LifePartner is null ? "None" : LifePartner.Name;
+            return $"{base.Stats()} Life partner: {lifePartnerName}";
+        }
     }
 }
