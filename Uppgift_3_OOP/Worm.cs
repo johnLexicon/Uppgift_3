@@ -10,5 +10,10 @@ namespace Uppgift_3_OOP
         }
 
         public bool IsPoisonous { get => isPoisonous; set => isPoisonous = value; }
+
+        public override string Stats()
+        {
+            return $"{base.Stats()} Is poisonous: {IsPoisonous}";
+        }
     }
 }
