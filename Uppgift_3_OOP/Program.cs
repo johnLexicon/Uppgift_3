@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace Uppgift_3_OOP
 {
@@ -98,6 +99,45 @@ namespace Uppgift_3_OOP
             foreach (var error in UserErrorsRepository.RetrieveErrors())
             {
                 Console.WriteLine(error.UEMessage());
+            }
+
+            //3.4.10 Testa och se så det fungerar.
+            Console.WriteLine();
+            TestNumericInputError();
+            Console.WriteLine();
+            TestTextInputError();
+        }
+
+        private static void TestNumericInputError()
+        {
+            try
+            {
+                string text = "I have 1 digit";
+                bool containsDigits = Regex.IsMatch(text, @"\d+");
+                if (containsDigits)
+                {
+                    throw new CustomException(new NumericInputError());
+                }
+            }
+            catch (CustomException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        private static void TestTextInputError()
+        {
+            try
+            {
+                bool success = int.TryParse("1a3", out int number);
+                if (!success)
+                {
+                    throw new CustomException(new TextInputError());
+                }
+            }
+            catch (CustomException e)
+            {
+                Console.WriteLine(e.Message);
             }
         }
     }

@@ -52,6 +52,7 @@
     <Compile Include="Swan.cs" />
     <Compile Include="Stork.cs" />
     <Compile Include="Cat.cs" />
+    <Compile Include="CustomException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
