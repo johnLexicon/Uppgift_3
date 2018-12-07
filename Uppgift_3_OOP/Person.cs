@@ -33,6 +33,9 @@ namespace Uppgift_3_OOP
         }
 
         //3.1.2
+        /// <summary>
+        /// Nested class used to handle the Person class (Factory pattern?).
+        /// </summary>
         public static class PersonHandler
         {
 

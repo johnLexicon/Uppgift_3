@@ -102,9 +102,9 @@ namespace Uppgift_3_OOP
             //3.3.16 Hitta ett sätt att skriva ut din nya metod för dog genom en foreach på Animals.
             foreach (var animal in animals)
             {
-                if(animal is Dog)
+                if(animal is Dog dog)
                 {
-                    Console.WriteLine((animal as Dog).TellMeWhatYouAre());
+                    Console.WriteLine(dog.TellMeWhatYouAre());
                 }
             }
 
