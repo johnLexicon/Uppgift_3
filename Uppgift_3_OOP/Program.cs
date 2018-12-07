@@ -94,7 +94,10 @@ namespace Uppgift_3_OOP
                 {
                     Console.WriteLine((animal as Dog).TellMeWhatYouAre());
                 }
-            }            Console.WriteLine();
+            }
+
+            Console.WriteLine();
+
             //3.4.8 Skriv ut samtliga UserErrors UEMessage() genom en foreach loop
             foreach (var error in UserErrorsRepository.RetrieveErrors())
             {
@@ -106,6 +109,12 @@ namespace Uppgift_3_OOP
             TestNumericInputError();
             Console.WriteLine();
             TestTextInputError();
+            Console.WriteLine();
+            TestBirdError();
+            Console.WriteLine();
+            TestDogError();
+            Console.WriteLine();
+            TestSwanError();
         }
 
         private static void TestNumericInputError()
@@ -134,6 +143,71 @@ namespace Uppgift_3_OOP
                 {
                     throw new CustomException(new TextInputError());
                 }
+            }
+            catch (CustomException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+
+
+        private static void TestBirdError()
+        {
+            try
+            {
+                Animal horse = new Horse();
+                Bird bird = horse as Bird;
+                if(bird is null)
+                {
+                    throw new CustomException(new BirdError());
+                }
+            }
+            catch (CustomException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        private static void TestDogError()
+        {
+            try
+            {
+                Animal cat = new Cat();
+                Dog dog = cat as Dog;
+                if (dog is null)
+                {
+                    throw new CustomException(new DogError());
+                }
+            }
+            catch (CustomException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+
+        private static void TestSwanError()
+        {
+            try
+            {
+                Swan swan = new Swan()
+                {
+                    Age = 10,
+                    Name = "Sweeney",
+                    LifePartner = null,
+                    WingSpan = 20,
+                    Weight = 25
+                };
+
+                try
+                {
+                    Console.WriteLine(swan.LifePartner.Stats());
+                }
+                catch(NullReferenceException)
+                {
+                    throw new CustomException(new SwanError());
+                }
+                
             }
             catch (CustomException e)
             {

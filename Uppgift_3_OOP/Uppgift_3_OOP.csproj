@@ -36,6 +36,7 @@
     <Compile Include="AnimalRepository.cs" />
     <Compile Include="BirdError.cs" />
     <Compile Include="Dog.cs" />
+    <Compile Include="DogError.cs" />
     <Compile Include="NumericInputError.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -43,6 +44,7 @@
     <Compile Include="Animal.cs" />
     <Compile Include="Horse.cs" />
     <Compile Include="Hedgehog.cs" />
+    <Compile Include="SwanError.cs" />
     <Compile Include="TextInputError.cs" />
     <Compile Include="UserError.cs" />
     <Compile Include="UserErrorsRepository.cs" />

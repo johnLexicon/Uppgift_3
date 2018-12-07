@@ -9,7 +9,6 @@ namespace Uppgift_3_OOP
     //3.4.1 Skapa den abstrakta klassen UserError
     abstract class UserError
     {
-        //
         public abstract string UEMessage();
     }
 }
