@@ -9,7 +9,12 @@ namespace Uppgift_3_OOP
     {
         public static void Main(string[] args)
         {
+
+
             //3.1.5
+
+            Console.WriteLine("------------------------3.1----------------------");
+
             Person p1 = Person.PersonHandler.CreatePerson();
 
             //Set age to person through the PersonHandler class.
@@ -24,6 +29,10 @@ namespace Uppgift_3_OOP
             Console.WriteLine(Person.PersonHandler.GetLname(p1));
             Console.WriteLine(Person.PersonHandler.GetHeight(p1));
             Console.WriteLine(Person.PersonHandler.GetWeight(p1));
+
+            //3.2
+
+            Console.WriteLine("------------------------3.2----------------------");
 
             Bird b1 = new Swan()
             {
@@ -47,19 +56,22 @@ namespace Uppgift_3_OOP
             (b2 as Swan).LifePartner = (b1 as Swan);
 
             Console.WriteLine(b1.Stats());
-            
 
-            List<Animal> animals = AnimalRepository.RetrieveAnimals();
+            Console.WriteLine("------------------------3.3----------------------");
+            Console.WriteLine();
+
+            List<Animal> animals = Repository.RetrieveAnimals();
 
             foreach(var animal in animals)
             {
                 Console.WriteLine(animal.GetType());
             }
 
+            //Filter dogs
             List<Dog> dogs = animals.OfType<Dog>().ToList<Dog>();
 
-            //F 3.3.7 = På grund av att de är olika typer. Kan inte konverterar en häst till en hund.
-            //F 3.3.8 = Listan måste vara av typen Animal för att kunna lagra alla typer av djur (eftersom alla ärver från klassen animal).
+            //3.3.7 = På grund av att de är olika typer. Kan inte konverterar en häst till en hund.
+            //3.3.8 = Listan måste vara av typen Animal för att kunna lagra alla typer av djur (eftersom alla ärver från klassen animal).
             //dogs.Add(new Horse());
 
             //3.3.9 Skriv ut samtliga Animals Stats() genom en foreach loop.
@@ -96,10 +108,11 @@ namespace Uppgift_3_OOP
                 }
             }
 
+            Console.WriteLine("------------------------3.4----------------------");
             Console.WriteLine();
 
             //3.4.8 Skriv ut samtliga UserErrors UEMessage() genom en foreach loop
-            foreach (var error in UserErrorsRepository.RetrieveErrors())
+            foreach (var error in Repository.RetrieveErrors())
             {
                 Console.WriteLine(error.UEMessage());
             }

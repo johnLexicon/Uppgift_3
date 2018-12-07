@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Uppgift_3_OOP
 {
-    internal static class AnimalRepository
+    internal static class Repository
     {
         internal static List<Animal> RetrieveAnimals()
         {
@@ -70,6 +70,18 @@ namespace Uppgift_3_OOP
                     Weight = 80,
                     WingSpan = 20
                 }
+            };
+        }
+
+        internal static List<UserError> RetrieveErrors()
+        {
+            return new List<UserError>()
+            {
+                new NumericInputError(),
+                new TextInputError(),
+                new NumericInputError(),
+                new TextInputError(),
+                new NumericInputError()
             };
         }
     }
